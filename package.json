@@ -22,6 +22,7 @@
     "@types/react-dom": "^18.3.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
+    "gh-pages": "^6.3.0",
     "identity-obj-proxy": "^3.0.0",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2"
@@ -35,6 +36,7 @@
     "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*.{js,jsx,ts,tsx,json,css,md}",
     "format:check": "prettier --check src/**/*.{js,jsx,ts,tsx,json,css,md}",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "browserslist": [
