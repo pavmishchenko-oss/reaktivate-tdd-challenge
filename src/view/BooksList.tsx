@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import LoadingState from './LoadingState';
 import ErrorState from './ErrorState';
 import EmptyState from './EmptyState';
@@ -11,7 +12,7 @@ interface BooksListProps {
   error: string | null;
 }
 
-const BooksList: React.FC<BooksListProps> = ({ books, isLoading, error }) => {
+const BooksList: React.FC<BooksListProps> = observer(({ books, isLoading, error }) => {
   if (isLoading) {
     return <LoadingState message="Loading books..." />;
   }
@@ -31,6 +32,6 @@ const BooksList: React.FC<BooksListProps> = ({ books, isLoading, error }) => {
   }
 
   return <BooksContent books={books} />;
-};
+});
 
 export default BooksList;

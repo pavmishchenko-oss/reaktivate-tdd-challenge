@@ -85,7 +85,7 @@ export class BooksController {
   }
 
   get booksCount(): number {
-    return this.books.length;
+    return this.books.length; // Return filtered books count as originally intended
   }
 
   get privateBooksCount(): number {

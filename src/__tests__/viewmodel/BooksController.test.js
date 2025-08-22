@@ -181,6 +181,24 @@ describe('BooksController', () => {
       expect(controller.books).toEqual(mockBooks);
     });
 
+    test('should return private books when isShowingAllBooks is false', () => {
+      const mockPrivateBooks = [{ name: 'Private Book 1', author: 'Author 1' }];
+      booksStore.privateBooks = mockPrivateBooks;
+      controller.setShowAllBooks(false);
+
+      expect(controller.books).toEqual(mockPrivateBooks);
+    });
+
+    test('should return all books when isShowingAllBooks is true', () => {
+      const mockAllBooks = [{ name: 'Book 1', author: 'Author 1' }];
+      const mockPrivateBooks = [{ name: 'Private Book 1', author: 'Author 1' }];
+      booksStore.books = mockAllBooks;
+      booksStore.privateBooks = mockPrivateBooks;
+      controller.setShowAllBooks(true);
+
+      expect(controller.books).toEqual(mockAllBooks);
+    });
+
     test('should return loading state from store', () => {
       booksStore.isLoading = true;
       expect(controller.isLoading).toBe(true);
