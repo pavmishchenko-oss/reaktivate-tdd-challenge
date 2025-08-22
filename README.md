@@ -218,44 +218,39 @@ class BooksController {
 
 ## 🚀 Deployment
 
-### GitHub Pages (Automatic)
+### GitHub Pages
 
-This project is automatically deployed to GitHub Pages on every push to the `main` branch.
+This project is deployed to GitHub Pages from the `docs` folder.
 
 - **Live Demo**: [https://pavmishchenko-oss.github.io/reaktivate-tdd-challenge](https://pavmishchenko-oss.github.io/reaktivate-tdd-challenge)
-- **Auto-deploy**: Enabled via GitHub Actions
-- **Branch**: `main` → `gh-pages`
+- **Deployment**: Manual copy of build to docs folder
 
-### Manual Deployment
+### Build and Deploy
 
-#### Environment Variables
+1. **Build the project:**
+```bash
+npm run build
+```
+
+2. **Copy build contents to docs folder:**
+```bash
+cp -r build/* docs/
+```
+
+3. **Commit and push changes:**
+```bash
+git add docs/
+git commit -m "Update GitHub Pages"
+git push origin main
+```
+
+### Environment Variables
 
 Required environment variables for production:
 
 ```env
 REACT_APP_API_BASE=https://your-api-domain.com/v1
 REACT_APP_USER=production-user
-```
-
-#### Build Process
-
-```bash
-npm run build
-```
-
-Generates optimized production build in `build/` directory.
-
-#### Deploy to GitHub Pages
-
-```bash
-# Install gh-pages package
-npm install --save-dev gh-pages
-
-# Add deploy script to package.json
-"deploy": "gh-pages -d build"
-
-# Deploy
-npm run deploy
 ```
 
 ## 🤝 Contributing

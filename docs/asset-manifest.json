@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/reaktivate-tdd-challenge/static/css/main.4480857b.css",
-    "main.js": "/reaktivate-tdd-challenge/static/js/main.8c7cbf00.js",
+    "main.js": "/reaktivate-tdd-challenge/static/js/main.54910ece.js",
     "index.html": "/reaktivate-tdd-challenge/index.html",
     "main.4480857b.css.map": "/reaktivate-tdd-challenge/static/css/main.4480857b.css.map",
-    "main.8c7cbf00.js.map": "/reaktivate-tdd-challenge/static/js/main.8c7cbf00.js.map"
+    "main.54910ece.js.map": "/reaktivate-tdd-challenge/static/js/main.54910ece.js.map"
   },
   "entrypoints": [
     "static/css/main.4480857b.css",
-    "static/js/main.8c7cbf00.js"
+    "static/js/main.54910ece.js"
   ]
 }
