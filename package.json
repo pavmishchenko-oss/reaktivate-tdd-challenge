@@ -1,6 +1,7 @@
 {
   "name": "reaktivate-tdd-challenge-1-sample-begin",
   "version": "1.0.0",
+  "homepage": "https://pavmishchenko-oss.github.io/reaktivate-tdd-challenge",
   "description": "How we create a fast-test architecture from scratch.",
   "keywords": [],
   "main": "src/index.js",
